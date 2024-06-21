@@ -87,7 +87,7 @@ app.put('/update/:index', (req: Request, res: Response) => {
     }
   } catch (err) {
     console.error('Error updating submission:', err);
-    res.status(500).json({ error: 'Internal server error' });
+    res.status(500).json({ error: 'Internal server error' });   
   }
 });
 
