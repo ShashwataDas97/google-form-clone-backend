@@ -1,0 +1,25 @@
+{
+  "submissions": [
+    {
+      "name": "Shashwata Das",
+      "email": "shashwatadas802@gmail.com",
+      "phone": "9875445477",
+      "github_link": "https://github.com/ShashwataDas97",
+      "stopwatch_time": "00:00:25"
+    },
+    {
+      "name": "Hrishav Shome",
+      "email": "hrishavshome99@gmail.com",
+      "phone": "9875445478",
+      "github_link": "https://github.com/HrishavShome99",
+      "stopwatch_time": "00:00:20"
+    },
+    {
+      "name": "Banti Shome",
+      "email": "bantishome99@gmail.com",
+      "phone": "9051580642",
+      "github_link": "https://github.com/BantiShome99",
+      "stopwatch_time": "01:23:42"
+    }
+  ]
+}
