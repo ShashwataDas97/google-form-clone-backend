@@ -19,10 +19,12 @@ const initializeDb = () => {
 // Middleware to initialize db.json
 initializeDb();
 
+// Health check endpoint
 app.get('/ping', (req: Request, res: Response) => {
   res.json(true);
 });
 
+// Endpoint to submit a new submission
 app.post('/submit', (req: Request, res: Response) => {
   const { name, email, phone, github_link, stopwatch_time } = req.body;
   const newSubmission = { name, email, phone, github_link, stopwatch_time };
@@ -38,6 +40,7 @@ app.post('/submit', (req: Request, res: Response) => {
   }
 });
 
+// Endpoint to read a specific submission by index
 app.get('/read', (req: Request, res: Response) => {
   const index = parseInt(req.query.index as string, 10);
   try {
@@ -54,6 +57,7 @@ app.get('/read', (req: Request, res: Response) => {
   }
 });
 
+// Endpoint to delete a specific submission by index
 app.delete('/delete', (req: Request, res: Response) => {
   const index = parseInt(req.query.index as string, 10);
   try {
@@ -71,6 +75,7 @@ app.delete('/delete', (req: Request, res: Response) => {
   }
 });
 
+// Endpoint to update a specific submission by index
 app.put('/update/:index', (req: Request, res: Response) => {
   const index = parseInt(req.params.index, 10);
   const { name, email, phone, github_link, stopwatch_time } = req.body;
@@ -91,6 +96,7 @@ app.put('/update/:index', (req: Request, res: Response) => {
   }
 });
 
+// Endpoint to search for a submission by email
 app.get('/search', (req: Request, res: Response) => {
   const email = req.query.email as string;
   try {
@@ -107,6 +113,7 @@ app.get('/search', (req: Request, res: Response) => {
   }
 });
 
+// Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
